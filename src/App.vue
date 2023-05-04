@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="App">
+
+    <NewStudentForm></NewStudentForm>
+    <student-message></student-message>
+    <student-table></student-table>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import NewStudentForm from './components/NewStudentForm.vue'
+import StudentMessage from './components/StudentMessage.vue'
+import StudentTable from './components/StudentTable.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NewStudentForm,
+    StudentMessage,
+    StudentTable
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
