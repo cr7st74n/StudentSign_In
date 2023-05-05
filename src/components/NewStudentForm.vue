@@ -23,7 +23,7 @@
 <script>
 export default {
   name: 'NewStudentForm',
-  emits: ['student-added'],
+  emits: ['student-added'],  //document for Emits
   data() {
       return {
           newStudentName: '',
@@ -42,7 +42,9 @@ export default {
           }
           if (this.errors.length == 0) {
               let student = { name: this.newStudentName, starID: this.newStarID, present: false }
+
               this.$emit('student-added', student)
+
               this.newStudentName = ''
               this.newStarID = ''
           } 
